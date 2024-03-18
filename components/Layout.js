@@ -1,13 +1,30 @@
 // components/Layout.js
-
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import styles from '../styles/layout.module.css'; // Import CSS module styles
+import Hamburger from './Hamburger'; // Import the Hamburger component
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        {/* Header content */}
+        <nav>
+          {/* Render the Hamburger component */}
+          <Hamburger isOpen={isOpen} toggle={toggleMenu} />
+          <ul className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
+            {/* Update links for Next.js routing */}
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/RedditSentimentAnalysis">RedditSentimentAnalysis</Link></li>
+            <li><Link href="/CDC2023">CDC2023</Link></li>
+            <li><Link href="/RegexResearch">RegexResearch</Link></li>
+          </ul>
+        </nav>
       </header>
       <main>
         {children}

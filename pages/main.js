@@ -4,6 +4,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout'; // Correct import path for Layout component
 import styles from '../styles/layout.module.css'; // Correct import path for CSS module
+import Link from 'next/link' //Links
 
 const YourPage = () => {
   const toggleMenu = () => {
