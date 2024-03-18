@@ -1,6 +1,8 @@
 // pages/RedditSentimentAnalysis.js
 
 import React from 'react';
+import Layout from '../components/Layout'; // Correct import path for Layout component
+import styles from '../styles/layout.module.css'; // Correct import path for CSS module
 
 const RedditSentimentAnalysisPage = () => {
   return (
@@ -21,9 +23,10 @@ const RedditSentimentAnalysisPage = () => {
         <h1>Reddit Sentiment Analysis</h1>
         <p>Sentiment analysis on the UNC Chapel Hill Reddit</p>
         <div className="container2">
-          <a href="/">Home</a> {/* Update path for Next.js routing */}
+          <a href="/"> Home</a> {/* Update path for Next.js routing */}
         </div>
         {/* Additional content */}
+        <time datetime="2016-10-25" suppressHydrationWarning />
       </body>
     </html>
   );

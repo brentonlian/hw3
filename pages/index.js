@@ -1,44 +1,19 @@
-// pages/index.js
-
 import React from 'react';
-import Layout from '../components/Layout.js'
-
+import Layout from '../components/Layout'; // Correct import path for Layout component
+import styles from '../styles/layout.module.css'; // Correct import path for CSS module
 
 const IndexPage = () => {
   const toggleMenu = () => {
-    // Implement your toggleMenu function logic here
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show-menu');
   };
 
   return (
-    <html>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Brenton Lian's Portfolio</title>
-        <link rel="stylesheet" href="/styles.css" /> {/* Update path for CSS file */}
-        {/* Include any necessary scripts */}
-        <script src="/main.js" />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <div className="menu-toggle" onClick={toggleMenu}>
-              <div className="bar"></div>
-              <div className="bar"></div>
-              <div className="bar"></div>
-            </div>
-            <ul className="menu">
-              {/* Update links for Next.js routing */}
-              <li><a href="/">Home</a></li>
-              <li><a href="/RedditSentimentAnalysis">RedditSentimentAnalysis</a></li>
-              <li><a href="/CDC2023">CDC2023</a></li>
-              <li><a href="/RegexResearch">RegexResearch</a></li>
-            </ul>
-          </nav>
-        </header>
-        <h1>Welcome to my portfolio website!</h1>
+    <Layout> {/* Use the Layout component to wrap the page content */}
+      <div className={styles.container}> {/* Use className to apply styles */}
+        <h1 classname={styles['layout-h1']}>Welcome to my portfolio website!</h1>
         <h2>My name is Brenton Lian, and I am a first year CS student at UNC-Chapel Hill. Check out some of my projects below</h2>
-        <div className="container">
+        <div className={styles.grid}>
           <ul>
             <li><a href="/RedditSentimentAnalysis">RedditSentimentAnalysis</a></li>
             <p>Sentiment analysis on the UNC Chapel Hill Reddit</p>
@@ -48,11 +23,11 @@ const IndexPage = () => {
             <p>Regex research done over Summer 2022</p>
           </ul>
         </div>
-        <div className="img-container">
+        <div className={styles.imgContainer}>
           <img src="https://m.media-amazon.com/images/I/71jAb9+mA4L._AC_SY300_SX300_.jpg" alt="Printer Image" />
         </div>
-      </body>
-    </html>
+      </div>
+    </Layout>
   );
 };
 

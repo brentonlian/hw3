@@ -1,6 +1,8 @@
 // pages/CDC2023.js
 
 import React from 'react';
+import Layout from '../components/Layout'; // Correct import path for Layout component
+import styles from '../styles/layout.module.css'; // Correct import path for CSS module
 
 const CDC2023Page = () => {
   return (
