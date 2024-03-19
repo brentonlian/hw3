@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/layout.module.css'; // Import CSS module styles
-import Hamburger from './Hamburger'; // Import the Hamburger component
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +15,6 @@ const Layout = ({ children }) => {
       <header className={styles.header}>
         <nav>
           {/* Render the Hamburger component */}
-          <Hamburger isOpen={isOpen} toggle={toggleMenu} />
           <ul className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
             {/* Update links for Next.js routing */}
             <li><Link href="/">Home</Link></li>
