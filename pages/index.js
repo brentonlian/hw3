@@ -26,11 +26,11 @@ const HomePage = () => {
               <Link href="/CDC2023">
                 CDC2023
               </Link>
-                <p>SData analytsis for the 2023 CDC competition</p>
+                <p>Data analysis for the 2023 CDC competition</p>
             </li>
             <li>
               <Link href="/RegexResearch">
-                egexResearch
+                RegexResearch
               </Link>
                 <p>Regex research done over Summer 2022</p>
             </li>
