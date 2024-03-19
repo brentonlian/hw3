@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout'; // Correct import path for Layout component
 import styles from '../styles/layout.module.css'; // Correct import path for CSS module
 import Link from 'next/link' //Links
+import Navbar from '../components/Navbar';
 
 const HomePage = () => {
   const toggleMenu = () => {
