@@ -4,6 +4,11 @@ import styles from '../styles/layout.module.css'; // Correct import path for CSS
 import Link from 'next/link' //Links
 import Navbar from '../components/Navbar';
 
+export default function Home() {
+  return <div>
+    <Navbar/>
+  </div>
+}
 const HomePage = () => {
   const toggleMenu = () => {
     const menu = document.querySelector('.menu');
@@ -45,4 +50,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+

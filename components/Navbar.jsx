@@ -1,14 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
+  { text: "CDC2023", href: "/CDC2023" },
+  { text: "RedditSentimentAnalysis", href: "/RedditSentimentAnalysis" },
+  { text: "RegexResearch", href: "/RegexResearch"}
 ];
+
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
@@ -16,11 +17,6 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`nav`}>
-        <Link href={"/"}>
-          <a>
-            <h1 className="logo">CodeWithMarish</h1>
-          </a>
-        </Link>
         <div
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}

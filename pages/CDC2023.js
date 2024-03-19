@@ -12,7 +12,7 @@ const CDC2023Page = () => {
         <h1>CDC 2023</h1>
         <h2>Data analysis done with my teammates on the CDC 2023 competition</h2>
         <div className={styles.container2}>
-          <a href="https://github.com/brentonlian/CDC2023_Business">Github link</a>
+          <Link href="https://github.com/brentonlian/CDC2023_Business">Github link</Link>
         </div>
         <div className={styles.container2}>
           <Link href="/">Home</Link> {/* Use Link for Next.js routing */}

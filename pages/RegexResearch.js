@@ -30,7 +30,7 @@ const RegexResearchPage = () => {
       <h1>Regex Research</h1>
       <h2>Research done on ReDOS vulnerability for the summer 2022 CSIRE program</h2>
       <div className={styles.container2}>
-        <a href="https://github.com/brentonlian/RegexResearch">Github link</a>
+        <Link href="https://github.com/brentonlian/RegexResearch">Github link</Link>
       </div>
       <div className={styles.container2}>
         <Link href="/">Home</Link> {/* Use Link for Next.js routing */}
