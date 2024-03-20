@@ -1,44 +1,25 @@
-import Link from "next/link";
-import Image from "next/image";
-import React, { useState } from "react";
-import NavItem from "./NavItem";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import NavItem from './NavItem'; // Assuming you have a NavItem component
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "CDC2023", href: "/CDC2023" },
-  { text: "RedditSentimentAnalysis", href: "/RedditSentimentAnalysis" },
-  { text: "RegexResearch", href: "/RegexResearch"}
+  { text: 'Home', href: '/' },
+  { text: 'CDC2023', href: '/CDC2023' },
+  { text: 'Reddit Sentiment Analysis', href: '/RedditSentimentAnalysis' },
+  { text: 'Regex Research', href: '/RegexResearch' },
 ];
 
 const Navbar = () => {
-  const [navActive, setNavActive] = useState(null);
+  const [navActive, setNavActive] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
+
+  const toggleMenu = () => {
+    setNavActive(!navActive);
+  };
 
   return (
     <header>
-      <nav className={`nav`}>
-        <div
-          onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-          {MENU_LIST.map((menu, idx) => (
-            <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
-              key={menu.text}
-            >
-              <NavItem active={activeIdx === idx} {...menu} />
-            </div>
-          ))}
-        </div>
-      </nav>
+     
     </header>
   );
 };

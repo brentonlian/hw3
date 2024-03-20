@@ -12,21 +12,7 @@ const RegexResearchPage = () => {
 
   return (
     <Layout>
-      <header>
-        <nav>
-          <div className="menu-toggle" onClick={toggleMenu}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>
-          <ul className="menu">
-            <li><Link href="/">Home</Link></li> {/* Use Link for Next.js routing */}
-            <li><Link href="/RedditSentimentAnalysis">RedditSentimentAnalysis</Link></li>
-            <li><Link href="/CDC2023">CDC2023</Link></li>
-            <li><Link href="/RegexResearch">RegexResearch</Link></li>
-          </ul>
-        </nav>
-      </header>
+      
       <h1>Regex Research</h1>
       <h2>Research done on ReDOS vulnerability for the summer 2022 CSIRE program</h2>
       <div className={styles.container2}>
